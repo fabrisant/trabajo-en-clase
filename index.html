@@ -4,20 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso de Datos de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #31ddcf;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #45afa1;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0ee0bd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ingreso de Datos de Clientes</h1>
-    <form action="#" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br><br>
-        
-        <input type="submit" value="Enviar">
+
+<div class="container">
+    <h2>Ingreso de Datos de Clientes</h2>
+    <form action="procesar.php" method="POST">
+        <!-- ingrese sus nombres -->
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <!-- ingresar su numero de cedula -->
+        <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+        </div>
+        <!-- Se ingresa la direccion de correo electronico -->
+        <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+        <!-- se ingresa el numero de telefono del cliente -->
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono">
+        </div>
+        <!-- se ingresa el tipo de sexo femenino o masculino  -->
+        <div class="form-group">
+            <label for="sexo">sexo:</label>
+            <input type="text" id="sexo" name="sexo" required>
+        </div>
+        <!-- Se ingresa la edad del cliente -->
+        <div class="form-group">
+            <label for="edad">edad:</label>
+            <input type="text" id="edad" name="edad" required>
+        </div>
+        <!-- se Ingresa la dirección del cliente -->
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+        </div>
+        <div class="form-group">
+            <!--Boton para enviar el formulario con todos los datos ingresados del cliente -->
+            <input type="submit" value="Guardar Datos">
+        </div>
     </form>
+</div>
+
 </body>
 </html>
